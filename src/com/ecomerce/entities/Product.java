@@ -114,7 +114,7 @@ public class Product {
 
 
 
-	public int getcategory() {
+	public Category getcategory() {
 		return category;
 	}
 

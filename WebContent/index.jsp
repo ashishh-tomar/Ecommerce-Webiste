@@ -5,8 +5,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<%@include file="Components/common_css_javascript.jsp"%>
+
 </head>
 <body>
 <h1>HEllo</h1>
+
+<!-- JavaScript -->
 </body>
 </html>
