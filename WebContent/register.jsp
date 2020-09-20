@@ -4,16 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome to Shop</title>
+<title>Register here</title>
 <%@include file="Components/common_css_javascript.jsp"%>
-
 </head>
 <body>
-
-
-<!-- Navbar Start -->
 <%@include file="navbar.jsp"%>
-<!-- Navbar end -->
-<!-- JavaScript -->
+
 </body>
 </html>
