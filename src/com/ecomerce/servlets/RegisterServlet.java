@@ -37,14 +37,15 @@ public class RegisterServlet extends HttpServlet {
 		{
 			HttpSession session=request.getSession();
 			session.setAttribute("message","Registration Successfull");
+			session.setAttribute("color","success");
 			
 			response.sendRedirect("register.jsp");
 		}
 		else
 		{
 			HttpSession session=request.getSession();
-			String value=null;
-			session.setAttribute("message",null);
+			session.setAttribute("message","Registration Failed");
+			session.setAttribute("color","danger");
 			
 			response.sendRedirect("register.jsp");
 		}
