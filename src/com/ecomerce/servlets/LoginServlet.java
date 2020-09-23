@@ -49,14 +49,12 @@ public class LoginServlet extends HttpServlet {
 			if(user.getUserType().equalsIgnoreCase("admin"))
 			{ 
 				//Admin page
-				RequestDispatcher req=request.getRequestDispatcher("admin.jsp");
-				req.forward(request, response);
+				response.sendRedirect("admin.jsp");
 			}
 			else if(user.getUserType().equalsIgnoreCase("normal"))
 			{
 				//Normal user page
-				RequestDispatcher req=request.getRequestDispatcher("normal.jsp");
-				req.forward(request, response);
+				response.sendRedirect("normal.jsp");
 			}
 			else
 			{
