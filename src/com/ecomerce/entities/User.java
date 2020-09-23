@@ -11,7 +11,9 @@ public class User {
 	private String userType;
 	
 	public User()
-	{}
+	{
+		
+	}
 
 	public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userPic,
 			String userAddress,String userType) {

@@ -3,6 +3,7 @@ package com.ecomerce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.ecomerce.entities.User;
 
@@ -42,4 +43,46 @@ public class UserDao {
 		}
 		return flag;
 	}
+	
+	public User getUserbyEmailAndPassword(String email,String password)
+	{
+		User user=null;
+		try {
+			String sql="select * from user where userEmail=? and userPassword=?";
+			PreparedStatement pst=con.prepareStatement(sql);
+			pst.setString(1,email);
+			pst.setString(2,password);
+			
+			ResultSet rs=pst.executeQuery();
+			while(rs.next())
+			{
+				user=new User();
+				int userId=rs.getInt(1);
+				String userName=rs.getString(2);
+				String userEmail=rs.getString(3);
+				String userPassword=rs.getString(4);
+				String userPhone=rs.getString(5);
+				String userPic=rs.getString(6);
+				String userAddress=rs.getString(7);
+				String userType=rs.getString(8);
+				
+				user.setUserId(userId);
+				user.setUserAddress(userAddress);
+				user.setUserName(userName);
+				user.setUserEmail(userEmail);
+				user.setUserPhone(userPhone);
+				user.setUserPic(userPic);
+				user.setUserType(userType);
+				user.setUserPassword(userPassword);
+				
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return user;
+	}
+
 }
