@@ -32,6 +32,9 @@ else
 <body>
 <%@include file="navbar.jsp" %>
 <div class="container ">
+<div class="container-fluid">
+<%@include file="Components/message.jsp"%>
+</div>
 	<div class="row mt-3">
 		<!-- First col -->
 		<div class="col-md-4">
@@ -98,7 +101,7 @@ else
 	<!-- Col 2 -->
 		<div class="col-md-6">
 		
-			<div class="card box-shadow" style=" cursor: pointer;">
+			<div class="card box-shadow " style=" cursor: pointer;" data-toggle="modal" data-target="#add-product">
 				<div class="card-body text-center">
 				<div class="container">
 						<img src="img/addProduct.jpg" alt="User" class="img-fluid" style="height:9rem;">
@@ -114,11 +117,8 @@ else
 	</div>
 </div>
 
-<!-- Modal -->
 
-
-<!-- Modal -->
-<!-- Modal -->
+<!-- Modal for add category -->
 <div class="modal fade" id="add-categories" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -129,10 +129,11 @@ else
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="ProductOperationServlet" method="post">
+        <input type="hidden" name="operation" value="addCategory">
         <div class="form-group">
     		
-    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="category-title" aria-describedby="emailHelp" name="categoryTitle" placeholder="Enter Category Title">
+    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="category-title"  name="categoryTitle" placeholder="Enter Category Title">
     	</div>
   		<div class="form-group">
     						<textarea class="form-control border-top-0 border-right-0 border-left-0" name="categoryDescription"placeholder="Enter Category Description"></textarea>
@@ -150,7 +151,74 @@ else
       </div>
     </div>
   </div>
+  
+  <!-- Modal for add Product -->
+ 
+
+
+<!-- Modal -->
+<div class="modal fade" id="add-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header custom-bg">
+        <h5 class="modal-title" id="exampleModalLabel">Add Product Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="" method="post">
+      <input type="hidden" name="operation" value="addProduct">
+              <div class="form-group">
+    		<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pName" name="productName" placeholder="Enter Product Name">
+    	</div>
+    	<div class="form-group">
+    		
+    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pDescription"  name="productDescription" placeholder="Enter Product Description">
+    	</div>
+    	<div class="form-group">
+    		
+    			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pPrice"  name="productPrice" placeholder="Enter Product Price">
+    	</div>
+    	
+    	<div class="form-group">
+    		
+    			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pDiscount"  name="productDiscount" placeholder="Enter Discount on Product">
+    	</div>
+    	<div class="form-group">
+    		
+    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pQuality"  name="productQuality" placeholder="Enter Product Quality">
+    	</div>
+    	<div class="form-group">
+    		
+    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pCategory"  name="productCategory" placeholder="Enter Product Category">
+    	</div>
+    	
+    	
+    	
+    	<div class="input-group mb-3">
+  			
+  			<div class="custom-file" >
+    			<input type="file" class="custom-file-input" id="inputGroupFile01">
+    			<label class="custom-file-label" for="inputGroupFile01">Choose Product Picture</label>
+  			</div>
+		</div>
+		
+  			<div class="container text-center">
+  			<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+  			<button type="submit" class="btn btn-outline-dark"> Add Product </button>
+  		</div>
+		
+  		
+    	
+    	</form>
+        
+      </div>
+     
+    </div>
+  </div>
 </div>
+
 
 </body>
 </html>
