@@ -83,7 +83,7 @@ else
 	<div class="row mt-5">
 	<!-- Col 1 -->
 		<div class="col-md-6">
-			<div class="card box-shadow">
+			<div class="card box-shadow" style=" cursor: pointer;" data-toggle="modal" data-target="#add-categories">
 				<div class="card-body text-center">
 				<div class="container">
 						<img src="img/addCategories.jpg" alt="User" class="img-fluid" style="height:9rem;">
@@ -98,7 +98,7 @@ else
 	<!-- Col 2 -->
 		<div class="col-md-6">
 		
-			<div class="card box-shadow">
+			<div class="card box-shadow" style=" cursor: pointer;">
 				<div class="card-body text-center">
 				<div class="container">
 						<img src="img/addProduct.jpg" alt="User" class="img-fluid" style="height:9rem;">
@@ -112,6 +112,44 @@ else
 		</div>
 	
 	</div>
+</div>
+
+<!-- Modal -->
+
+
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="add-categories" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header custom-bg">
+        <h5 class="modal-title" id="exampleModalLongTitle">Fill Categories Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+        <div class="form-group">
+    		
+    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="category-title" aria-describedby="emailHelp" name="categoryTitle" placeholder="Enter Category Title">
+    	</div>
+  		<div class="form-group">
+    						<textarea class="form-control border-top-0 border-right-0 border-left-0" name="categoryDescription"placeholder="Enter Category Description"></textarea>
+  		</div >
+  		
+  		<div class="container text-center">
+  			<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+  			<button type="submit" class="btn btn-outline-dark"> Add Category </button>
+  		</div>
+        
+        </form>
+      </div>
+     
+        
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
