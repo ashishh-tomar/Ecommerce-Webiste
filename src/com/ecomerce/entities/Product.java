@@ -2,12 +2,12 @@ package com.ecomerce.entities;
 
 public class Product {
 	private int pId;
-	private String pTitle;
+	private String pName;
 	private String pDescription;
 	private String pPhoto;
-	private double pPrice;
-	private float pDiscount;
-	private String pQuality;
+	private int pPrice;
+	private int pDiscount;
+	private int pQuantity;
 	private Category category;
 	
 	
@@ -16,15 +16,15 @@ public class Product {
 
 	
 
-	public Product(String pTitle, String pDescription, String pPhoto, double pPrice, float pDiscount, String pQuality,
+	public Product(String pName, String pDescription, String pPhoto, int pPrice, int pDiscount, int pQuantity,
 			Category category) {
 		super();
-		this.pTitle = pTitle;
+		this.pName = pName;
 		this.pDescription = pDescription;
 		this.pPhoto = pPhoto;
 		this.pPrice = pPrice;
 		this.pDiscount = pDiscount;
-		this.pQuality = pQuality;
+		this.pQuantity = pQuantity;
 		this.category = category;
 	}
 
@@ -42,14 +42,14 @@ public class Product {
 
 
 
-	public String getpTitle() {
-		return pTitle;
+	public String getpName() {
+		return pName;
 	}
 
 
 
-	public void setpTitle(String pTitle) {
-		this.pTitle = pTitle;
+	public void setpName(String pName) {
+		this.pName = pName;
 	}
 
 
@@ -78,38 +78,38 @@ public class Product {
 
 
 
-	public double getpPrice() {
+	public int getpPrice() {
 		return pPrice;
 	}
 
 
 
-	public void setpPrice(double pPrice) {
+	public void setpPrice(int pPrice) {
 		this.pPrice = pPrice;
 	}
 
 
 
-	public float getpDiscount() {
+	public int getpDiscount() {
 		return pDiscount;
 	}
 
 
 
-	public void setpDiscount(float pDiscount) {
+	public void setpDiscount(int pDiscount) {
 		this.pDiscount = pDiscount;
 	}
 
 
 
-	public String getpQuality() {
-		return pQuality;
+	public int getpQuantity() {
+		return pQuantity;
 	}
 
 
 
-	public void setpQuality(String pQuality) {
-		this.pQuality = pQuality;
+	public void setpQuantity(int pQuality) {
+		this.pQuantity = pQuality;
 	}
 
 

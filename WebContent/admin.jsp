@@ -1,3 +1,8 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.ecomerce.entities.Category"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ecomerce.helper.ConnectionProvider"%>
+<%@page import="com.ecomerce.dao.CategoryDao"%>
 <%@page import="com.ecomerce.entities.User"%>
 <%
 
@@ -152,7 +157,7 @@ else
     </div>
   </div>
   
-  <!-- Modal for add Product -->
+<!-- Modal for add Product -->
  
 
 
@@ -167,18 +172,17 @@ else
         </button>
       </div>
       <div class="modal-body">
-      <form action="" method="post">
+      <form action="ProductOperationServlet" method="post" enctype="multipart/form-data">
       <input type="hidden" name="operation" value="addProduct">
               <div class="form-group">
-    		<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pName" name="productName" placeholder="Enter Product Name">
+    		<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pName" name="productName" placeholder="Enter Product Name" required="required">
     	</div>
     	<div class="form-group">
-    		
-    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pDescription"  name="productDescription" placeholder="Enter Product Description">
-    	</div>
+    						<textarea class="form-control border-top-0 border-right-0 border-left-0" name="productDescription"placeholder="Enter Product Description" required="required"></textarea>
+  		</div >
     	<div class="form-group">
     		
-    			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pPrice"  name="productPrice" placeholder="Enter Product Price">
+    			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pPrice"  name="productPrice" placeholder="Enter Product Price" required="required">
     	</div>
     	
     	<div class="form-group">
@@ -187,11 +191,25 @@ else
     	</div>
     	<div class="form-group">
     		
-    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pQuality"  name="productQuality" placeholder="Enter Product Quality">
+    			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pQuantity"  name="productQuantity" placeholder="Enter Product Quantity" required="required">
     	</div>
-    	<div class="form-group">
-    		
-    			<input type="text" class="form-control border-top-0 border-left-0 border-right-0" id="pCategory"  name="productCategory" placeholder="Enter Product Category">
+    	
+    	<% 
+    		CategoryDao dao=new CategoryDao(ConnectionProvider.getConnection());
+			ArrayList<Category> list=dao.getCategories();
+    	%>
+    	<div class="form-group text-muted">
+    		<select name="cId" class="form-control" required="required">
+    			
+    			<%for(Category c:list){ 
+    			
+    			%>
+    			<option value="<%=c.getCategoryId() %>"><%= c.getCategoryTitle() %></option>
+    			<%
+    			}
+    			%>
+    		</select>
+    	
     	</div>
     	
     	
@@ -199,7 +217,7 @@ else
     	<div class="input-group mb-3">
   			
   			<div class="custom-file" >
-    			<input type="file" class="custom-file-input" id="inputGroupFile01">
+    			<input type="file" class="custom-file-input" id="inputGroupFile01" name="productPic" required="required">
     			<label class="custom-file-label" for="inputGroupFile01">Choose Product Picture</label>
   			</div>
 		</div>
