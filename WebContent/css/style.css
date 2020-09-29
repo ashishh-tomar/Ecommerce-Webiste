@@ -25,6 +25,12 @@
 }
 
 
+.list-group-item.active {
+   
+    background-color:#eeeeee ;
+    border-color: #eeeeee;
+}
+
 
 
 

@@ -89,15 +89,15 @@ public class ProductOperationServlet extends HttpServlet {
 			p.setcId(c);
 			
 			ProductDao pd=new ProductDao(ConnectionProvider.getConnection());
-			//boolean flag=pd.saveProduct(p);
+			boolean flag=pd.saveProduct(p);
 			
 			//--------------------------------------------------Pic Upload -----------------------------------------------------------------------
 			//Find out the path to upload photo
 			
-			String path=request.getRealPath("img")+File.separator+"ProductsImage"+File.separator+part.getSubmittedFileName();
+			//String path=request.getRealPath("img")+File.separator+"ProductsImage"+File.separator+part.getSubmittedFileName();
 			
 			
-			//String path="C:"+File.separator+"Users"+File.separator+"Ashish"+File.separator+"eclipse-workspace"+File.separator+"E-commerce"+File.separator+"WebContent"+File.separator+"img"+File.separator+"ProductsImage"+File.separator+part.getSubmittedFileName();
+			String path="C:"+File.separator+"Users"+File.separator+"Ashish"+File.separator+"eclipse-workspace"+File.separator+"E-commerce"+File.separator+"WebContent"+File.separator+"img"+File.separator+"ProductsImage"+File.separator+part.getSubmittedFileName();
 			System.out.println(path);
 			//Now we are writing imge using file i/o in particular folder
 			try {

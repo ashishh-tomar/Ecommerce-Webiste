@@ -2,7 +2,11 @@ package com.ecomerce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.ecomerce.entities.Category;
 import com.ecomerce.entities.Product;
 
 public class ProductDao {
@@ -42,6 +46,51 @@ private Connection con;
 			e.printStackTrace();
 		}
 		return flag;
+	}
+	
+	
+	//Get All Products
+	
+	public ArrayList <Product> getAllProducts()
+	{
+		ArrayList<Product> list=new ArrayList<Product>();
+		
+		String sql="select * from product";
+		try {
+			PreparedStatement pst=con.prepareStatement(sql);
+			ResultSet rs=pst.executeQuery();
+			while(rs.next())
+			{
+				int pId=rs.getInt(1);
+				String pName=rs.getString(2);
+				String pDescription=rs.getString(3);
+				String pPhoto=rs.getString(4);
+				int pPrice=rs.getInt(5);
+				int pDiscount=rs.getInt(6);
+				int pQuantity=rs.getInt(7);
+				int cId=rs.getInt(8);
+				Category c=new Category();
+				c.setCategoryId(cId);
+				
+				Product p=new Product();
+				p.setpId(pId);
+				p.setpName(pName);
+				p.setpDescription(pDescription);
+				p.setpPhoto(pPhoto);;
+				p.setpPrice(pPrice);;
+				p.setpDiscount(pDiscount);
+				p.setpQuantity(pQuantity);
+				p.setcId(c);
+				
+				list.add(p);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return list;
+		
 	}
 }
 
