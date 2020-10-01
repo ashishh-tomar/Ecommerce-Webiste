@@ -20,21 +20,33 @@
 <%@include file="navbar.jsp"%>
 <!-- Navbar end -->
 
-
+<div class="container-fluid">
 <div class="row mt-5">
 
 	<%
+		ArrayList<Product> list=null;
+		String category=request.getParameter("category");
 		ProductDao dao=new ProductDao(ConnectionProvider.getConnection());
-		ArrayList<Product> list=dao.getAllProducts();
+		
+		 if(category==null || category.trim().equals("all"))
+		{
+		 list=dao.getAllProducts();
+		}
+		else
+		{
+			int cId=Integer.parseInt(category.trim());
+			 list=dao.getAllProductsById(cId);
+			
+		}
 		CategoryDao dao2=new CategoryDao(ConnectionProvider.getConnection());
 		List<Category> cList=dao2.getCategories();
 	%>
 	
 	<!-- Show Categories -->
-	<div class="col-md-4 mt-4">
+	<div class="col-md-3 mt-4">
 		<div class="list-group">
-  			<a href="#" class="list-group-item list-group-item-action active">
-   				 Categories
+  			<a href="index.jsp?category=all" class="list-group-item text-dark list-group-item-action active">
+   				<h5> Categories</h5>
   				</a>
   				
 
@@ -44,7 +56,7 @@
 		{
 	%>
 			
-			<a href="#" class="list-group-item list-group-item-action"><%=c.getCategoryTitle() %></a>
+			<a href="index.jsp?category=<%=c.getCategoryId() %>" class="list-group-item list-group-item-action"><%=c.getCategoryTitle() %></a>
 		
 	<%
 		}
@@ -52,7 +64,7 @@
 		</div>
 	</div>
 	<!-- Showe products -->
-	<div class="col-md-8">
+	<div class="col-md-8 ml-5">
 	
 		<div class="row mt-4">
 			<div class="col-md-12">
@@ -81,6 +93,13 @@
 				
 				<%
 					}
+				
+				if(list.size()==0)
+				{
+					%>
+						<h5 class="display-4 text-center">No items...</h5>
+					<%
+				}
 				%>
 				
 				</div>
@@ -88,9 +107,9 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 
 <!-- JavaScript -->
 </body>
-</html>
+</html> 
