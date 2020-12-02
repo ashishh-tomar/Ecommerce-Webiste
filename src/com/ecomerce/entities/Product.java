@@ -124,6 +124,11 @@ public class Product {
 		this.category = category;
 	}
 	
+	public int getDiscountPrice()
+	{
+		int d=(int)((this.getpDiscount()/100.0)*this.getpPrice());
+		return this.getpPrice()-d;
+	}
 	
 	
 

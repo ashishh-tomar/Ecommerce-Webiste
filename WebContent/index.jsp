@@ -77,7 +77,7 @@
 				%>
 					<div class="card">
 						<div class="container text-center">
-							<img class="card-img-top " src="img/ProductsImage/<%=p.getpPhoto() %>"  style="max-height:250px;max-width:100%"alt="Card image cap">
+							<img class="card-img-top mt-2 " src="img/ProductsImage/<%=p.getpPhoto() %>"  style="max-height:100px;max-width:55%"alt="Card image cap">
 						
 						</div>
 						<div class="card-body">
@@ -85,8 +85,12 @@
 							<p class="card-text"><%=Helper.getTenWords(p.getpDescription()) %></p>
 						</div>
 						<div class="card-footer">
-							<button class="btn-outline-dark">Add to Cart</button>
-							<button class="btn-outline-dark" disabled> &#8377; <%=p.getpPrice() %></button>
+							<h5>&#8377; <%=p.getDiscountPrice() %>/-</h5>
+							<h6 style="font-size:10px;">&#8377;  <%=p.getpPrice()  %>/-    <%=   p.getpDiscount() %>% off   <button class="btn-outline-dark ml-3" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add to Cart</button> </h6>
+							
+							
+							
+							
 						</div>
 					
 					</div>

@@ -48,7 +48,7 @@ else
 				<div class="container">
 						<img src="img/user.jpg" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
-					<h2>12365</h2>
+					<h2>0</h2>
 					<h3 class="text-uppercase text-muted">Users</h3>
 				</div>
 			</div>
@@ -62,7 +62,7 @@ else
 				<div class="container">
 						<img src="img/categories.png" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
-					<h2>12365</h2>
+					<h2>0</h2>
 					<h3 class="text-uppercase text-muted">Categories</h3>
 				</div>
 			</div>
@@ -78,7 +78,7 @@ else
 						<img src="img/product2.jpg" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
 					
-					<h2>12365</h2>
+					<h2>0</h2>
 					<h3 class="text-uppercase text-muted">Products</h3>
 				</div>
 			</div>
