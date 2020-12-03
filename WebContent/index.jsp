@@ -114,6 +114,6 @@
 </div>
 
 
-<!-- JavaScript -->
+<%@include file="Components/common_modals.jsp"%>
 </body>
 </html> 

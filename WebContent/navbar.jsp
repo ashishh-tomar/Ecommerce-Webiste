@@ -10,6 +10,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about.jsp">About Us <span class="sr-only">(current)</span></a>
+      </li>
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -25,6 +28,9 @@
       
     </ul>
     <ul class="navbar-nav ml-auto">
+    <li class="nav-item active">
+        <a class="nav-link" href="#!" data-toggle="modal" data-target="#cart"><i class="fa fa-cart-plus" style="font-size:20px;"></i> <span class="ml-0 cart-items" >(0)</span></a>
+      </li>
     	<li class="nav-item active">
         <a class="nav-link" href="login.jsp">Login </a>
       </li>
