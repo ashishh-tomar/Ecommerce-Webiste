@@ -86,7 +86,7 @@ function update_cart()
 				<td>${item.productPrice}</td>
 				<td>${item.productQuantity}</td>
 				<td>${item.productQuantity*item.productPrice}</td>
-				<td><button class="btn-danger btn-sm">Remove</button></td>
+				<td><button onclick="deleteItemFromCart(${item.productId})" class="btn-danger btn-sm">Remove</button></td>
 			</tr>`
 				
 				totalPrice+=item.productPrice*item.productQuantity;
@@ -102,6 +102,15 @@ function update_cart()
 		$(".cart-body").html(table);
 		}
 }
+
+//delete Item
+function deleteItemFromCart(pid)
+{
+	let cart=JSON.parse(localStorage.getItem("cart"));
+	let newCart=cart.filter((item)=>item.productId != pid)
+	localStorage.setItem("cart",JSON.stringify(newCart))
+	update_cart();
+	}
 
 $(document).ready(function (){
 	update_cart()
