@@ -9,6 +9,7 @@ function add_to_cart(pId,pName,pPrice)
 		products.push(product);
 		localStorage.setItem("cart",JSON.stringify(products));
 		console.log("Product is added for the first time")
+		showToast("Item Added to Cart")
 		}
 	else
 		{
@@ -28,7 +29,9 @@ function add_to_cart(pId,pName,pPrice)
 				})
 				localStorage.setItem("cart",JSON.stringify(pCart));
 				console.log("Product Quantity is increase")
+				showToast(oldProduct.productName+" Quantity Increased, Quantity : "+oldProduct.productQuantity)
 				}
+			
 			else
 				{
 				//We have to add product
@@ -36,6 +39,7 @@ function add_to_cart(pId,pName,pPrice)
 				pCart.push(product)
 				localStorage.setItem("cart",JSON.stringify(pCart));
 				console.log("Product is added")
+				showToast("Product is Added to Cart")
 				}
 		}
 
@@ -86,7 +90,7 @@ function update_cart()
 				<td>${item.productPrice}</td>
 				<td>${item.productQuantity}</td>
 				<td>${item.productQuantity*item.productPrice}</td>
-				<td><button onclick="deleteItemFromCart(${item.productId})" class="btn-danger btn-sm">Remove</button></td>
+				<td><button onclick="deleteItemFromCart(${item.productId})"  class="btn-danger btn-sm">Remove</button></td>
 			</tr>`
 				
 				totalPrice+=item.productPrice*item.productQuantity;
@@ -110,8 +114,22 @@ function deleteItemFromCart(pid)
 	let newCart=cart.filter((item)=>item.productId != pid)
 	localStorage.setItem("cart",JSON.stringify(newCart))
 	update_cart();
+	showToast("Item is Removed from Cart ")
 	}
 
 $(document).ready(function (){
 	update_cart()
 })
+
+
+
+//toast 
+
+function showToast(content){
+            $("#toast").addClass("display");
+            $("#toast").html(content);
+
+            setTimeout(()=>{
+                $("#toast").removeClass("display");
+            },2000)
+        }

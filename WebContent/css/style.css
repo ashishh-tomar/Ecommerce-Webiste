@@ -40,11 +40,133 @@
 
 
 
+//Toast Css
+
+#toast{
+            min-width: 300px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -120px;
+            background:#333;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            font-size: 18px;
+            visibility: hidden;
+            box-shadow: 0px 0px 100px #000;
+        }
+
+        #toast.display{
+            visibility: visible;
+            animation: fadeIn 0.5s,fadeOut 0.5s 2.5s;
+        }
+
+        @keyframes fadeIn {
+            from{
+                bottom: 0;
+                opacity: 0;
+            }
+            to{
+                bottom: 30px;
+                opacity: 1;
+            }
+            
+        }
 
 
+        @keyframes fadeOut {
+            from{
+                bottom: 30px;
+                opacity: 1;
+            }
+            to{
+                bottom: 0;
+                opacity: 0;
+            }
+        }
 
 
+footer{
+	background-color:#282828;
+	color:white;
+	height:53vh;
+	
+}
 
+.footer-widget{
+	
+	margin:0 10px;
+	text-align:justify;
+}
+
+.widget-title{
+	color:white;
+	margin-top:10px;
+	margin-bottom:20px;
+	text-transform:uppercase;
+	font-size:20px;
+}
+
+.about-widget p
+{
+	line-height:10px;
+	margin:10px 0 30px 0;
+}
+
+.cards img{
+	display:inline-block;
+	margin-right:15px;
+	margin-left:15px;
+
+}
+
+.about-widget p span{
+	margin-right:10px;
+}
+
+
+.categories-widget, .information-widget
+{
+	margin-left:50px;
+}
+
+.footer-widget ul{
+	margin-left:20px;
+	
+}
+
+.footer-widget ul li{
+	
+	padding-bottom:14px;
+	}
+	
+.footer-widget ul li a{
+	color:white;
+	text-decoration:none;
+	}
+	
+.footer-widget ul li a:hover{
+	color:#d2d2d2;
+	text-decoration:none;
+	margin-left:10px;
+	transition:all .5s ease;
+	}
+
+.contact-address{
+	padding-bottom:20px;
+	border-bottom:1px solid #9a98988c;
+}
+.contact-number, .contact-email{
+	margin:10px 0;
+}
+.social-widgets a{
+	display:inline-block;
+	font-size:20px;
+	color:#aba8a8;
+	
+}
 
 
 

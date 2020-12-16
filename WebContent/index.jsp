@@ -87,13 +87,8 @@
 						<div class="card-footer">
 							<h5>&#8377; <%=p.getDiscountPrice() %>/-</h5>
 							<h6 style="font-size:10px;">&#8377;  <%=p.getpPrice()  %>/-    <%=   p.getpDiscount() %>% off   <button class="btn-outline-dark ml-3" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add to Cart</button> </h6>
-							
-							
-							
-							
 						</div>
-					
-					</div>
+			       </div>
 				
 				<%
 					}
@@ -112,7 +107,93 @@
 	</div>
 </div>
 </div>
+<!-- Footer  -->
 
+
+<footer>
+<div class="container wrap">
+	<div class="row">
+		<div class="col">
+			<div class="footer-widget">
+				<h4 class="widget-title about-widget">About</h4>
+				<p>We strive to have a positive impact on customers, employees, and communities. We are smart, passionate builders with different backgrounds and goals, who share a common desire to always be learning and inventing on behalf of our customers.</p>
+				
+				<div class="cards">
+					
+					<img style="width:28px;height:28px;" src="icons/mastercard.svg" alt="" >
+					<img style="width:28px;height:28px;" src="icons/paypal.svg" alt="" >
+					<img style="width:28px;height:28px;" src="icons/visa.svg" alt="" >
+				</div>
+				
+				<p><span><img style="width:15px;height:12px; margin-bottom:3px" src= "icons/lock.svg"></span>Secure Online Payment </p>
+				
+			</div>
+		</div>
+		
+		<div class="col">
+		<div class="footer-widget">
+			<h4 class="widget-title categories-widget">Categories</h4>
+				<ul>
+					<li><a href="#">Smart Phones</a></li>
+					<li><a href="#">Laptops</a></li>
+					<li><a href="#">Shoes</a></li>
+					<li><a href="#">Clothes</a></li>
+					<li><a href="#">Cameras</a></li>
+					
+				</ul>
+		</div>
+		</div>
+		
+		<div class="col">
+		<div class="footer-widget">
+			<h4 class="widget-title information-widget">Informations</h4>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Terms & Conditions</a></li>
+					<li><a href="#">Return & Exchange</a></li>
+					<li><a href="#">Shipping & Dilivery</a></li>
+					
+				</ul>
+		</div>
+		</div>
+		
+		<div class="col">
+			<div class="footer-widget contact-widget">
+				<h4 class="widget-title">Contact</h4>
+				<div class="contact-address">
+					Address : XYX, New Drlhi, India. <br>Pin-Code : 11111 <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/placeholder.svg" ></span>
+				</div>
+				<div class="contact-numbers">
+				Phone : +91 1234567890	<span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/phone.svg" ></span>
+				</div>
+				<div class="contact-email">
+				E-Mail : XYZ@gmail.com <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/gmail.svg" ></span>
+				</div>
+				<div class="social-widgets ">
+					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px fill:#000;" src="icons/facebook.svg" ></span></a>
+					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/instagram.svg" ></span></a>
+					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/twitter.svg" ></span></a>
+					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/youtube.svg" ></span></a>
+				</div>
+			
+			</div>
+		</div>
+	
+	</div>
+
+<div class="copyright">
+	<div class="container">
+		<p>Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script>
+		All Rights Reserved
+		</p>
+	</div>
+	
+</div>
+
+</div>
+
+</footer>
 
 <%@include file="Components/common_modals.jsp"%>
 </body>
