@@ -91,7 +91,7 @@
 footer{
 	background-color:#282828;
 	color:white;
-	height:53vh;
+	height:60vh;
 	
 }
 
@@ -103,8 +103,8 @@ footer{
 
 .widget-title{
 	color:white;
-	margin-top:10px;
-	margin-bottom:20px;
+	margin-top:30px;
+	
 	text-transform:uppercase;
 	font-size:20px;
 }
@@ -167,6 +167,85 @@ footer{
 	color:#aba8a8;
 	
 }
+
+
+
+
+
+
+
+.whole-card{
+	background: #eee5e9;
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+}
+.whole-card:hover{
+   transform: translateY(5px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+}
+.text-btn{
+    background: #ef6f6c;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-weight:600;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 15px;
+}
+.text-btn:hover{
+    transform: translateX(5px);
+    background-color:#f83835 ;
+    color:white;
+}
+
+
+
+
+@media (max-width: 320px)
+footer {
+    height: 40vh;
+}
+	
+@media (max-width:768px){
+	footer{
+	
+	   
+    height: 50vh
+	
+}
+}
+
+@media (max-width:540px){
+	footer{
+	
+	   
+    height: 60vh
+	
+}
+}
+
+@media (max-width:1024px){
+	footer{
+	
+	   
+    height: 100vh
+	
+}
+}
+
+@media (max-width:576px){
+	footer{
+	
+	
+    height: 200vh;
+	
+}
+}
+
 
 
 

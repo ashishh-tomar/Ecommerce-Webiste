@@ -6,10 +6,10 @@ public class Helper {
 	
 	{
 		String[] str=desc.split(" ");
-		if(str.length>10)
+		if(str.length>15)
 		{
 			String result="";
-			for(int i=0;i<10;i++)
+			for(int i=0;i<15;i++)
 			{
 				result=result+str[i]+" ";
 			}

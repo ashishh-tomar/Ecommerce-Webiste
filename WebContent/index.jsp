@@ -66,7 +66,7 @@
 	<!-- Showe products -->
 	<div class="col-md-8 ml-5">
 	
-		<div class="row mt-4">
+		<div class="row">
 			<div class="col-md-12">
 				<div class="card-columns">
 				
@@ -75,6 +75,7 @@
 					for(Product p :list)
 					{
 				%>
+				 <!--
 					<div class="card">
 						<div class="container text-center">
 							<img class="card-img-top mt-2 " src="img/ProductsImage/<%=p.getpPhoto() %>"  style="max-height:100px;max-width:55%"alt="Card image cap">
@@ -89,6 +90,29 @@
 							<h6 style="font-size:10px;">&#8377;  <%=p.getpPrice()  %>/-    <%=   p.getpDiscount() %>% off   <button class="btn-outline-dark ml-3" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add to Cart</button> </h6>
 						</div>
 			       </div>
+			       
+			      
+			       
+			       
+			       
+			        
+			      
+			        -->
+			       
+			       <div class="card whole-card" style="width: 16rem;">
+  						<img class="card-img-top" src="img/ProductsImage/<%=p.getpPhoto() %>" alt="Card image cap" style="width: 16rem;height:8rem;">
+  							<div class="card-body card-body-bg">
+    							<h5 class="card-title"><%=p.getpName() %></h5>
+    						<p class="card-text"><%=Helper.getTenWords(p.getpDescription()) %></p>
+    						<a href="#" class="btn text-btn">Go somewhere</a>
+  							</div>
+						</div>
+			       
+			       
+			       
+			       
+			       
+			       
 				
 				<%
 					}
@@ -194,6 +218,7 @@
 </div>
 
 </footer>
+
 
 <%@include file="Components/common_modals.jsp"%>
 </body>
