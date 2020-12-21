@@ -1,3 +1,7 @@
+<%@page import="com.ecomerce.entities.User"%>
+<%
+User user1=(User)session.getAttribute("currentUser");
+%>
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-bg">
   <div class="container">
   	<a class="navbar-brand" href="#">Business Bustle</a>
@@ -31,12 +35,31 @@
     <li class="nav-item active">
         <a class="nav-link" href="#!" data-toggle="modal" data-target="#cart"><i class="fa fa-cart-plus" style="font-size:20px;"></i> <span class="ml-0 cart-items" >(0)</span></a>
       </li>
+      
+      <%		if(user1==null)
+      { 
+      %>
     	<li class="nav-item active">
         <a class="nav-link" href="login.jsp">Login </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="register.jsp">Register</a>
       </li>
+      <%
+      }
+      else{
+    	    	  
+      %>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="<%=user1.getUserType().equalsIgnoreCase("admin")?"admin.jsp":"normal.jsp"%>"><%=user1.getUserName() %> </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="LogoutServlet">Logout</a>
+      </li>
+      <%
+      }
+      %>
     </ul>
   </div>
   </div>

@@ -1,3 +1,6 @@
+<%@page import="com.ecomerce.dao.ProductDao"%>
+<%@page import="com.ecomerce.entities.Product"%>
+<%@page import="com.ecomerce.dao.UserDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.ecomerce.entities.Category"%>
 <%@page import="java.util.List"%>
@@ -24,6 +27,11 @@ else
 
 %>
 
+<% 
+    		CategoryDao dao=new CategoryDao(ConnectionProvider.getConnection());
+			ArrayList<Category> list=dao.getCategories();
+%>
+
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -39,6 +47,18 @@ else
 <div class="container ">
 <div class="container-fluid">
 <%@include file="Components/message.jsp"%>
+
+
+<%
+
+
+UserDao u=new UserDao(ConnectionProvider.getConnection());
+ProductDao p=new ProductDao(ConnectionProvider.getConnection());
+//To use getCount method ND SHOW DYNAMIC VALUES
+
+%>
+
+
 </div>
 	<div class="row mt-3">
 		<!-- First col -->
@@ -48,7 +68,7 @@ else
 				<div class="container">
 						<img src="img/user.jpg" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
-					<h2>0</h2>
+					<h2><%=u.getCount() %></h2>
 					<h3 class="text-uppercase text-muted">Users</h3>
 				</div>
 			</div>
@@ -62,7 +82,7 @@ else
 				<div class="container">
 						<img src="img/categories.png" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
-					<h2>0</h2>
+					<h2><%=list.size() %></h2>
 					<h3 class="text-uppercase text-muted">Categories</h3>
 				</div>
 			</div>
@@ -78,7 +98,7 @@ else
 						<img src="img/product2.jpg" alt="User" class="img-fluid" style="height:9rem;">
 					</div>
 					
-					<h2>0</h2>
+					<h2><%=p.getCount() %></h2>
 					<h3 class="text-uppercase text-muted">Products</h3>
 				</div>
 			</div>
@@ -194,10 +214,9 @@ else
     			<input type="number" class="form-control border-top-0 border-left-0 border-right-0" id="pQuantity"  name="productQuantity" placeholder="Enter Product Quantity" required="required">
     	</div>
     	
-    	<% 
-    		CategoryDao dao=new CategoryDao(ConnectionProvider.getConnection());
-			ArrayList<Category> list=dao.getCategories();
-    	%>
+    	<!-- Product Category -->
+    	
+    	
     	<div class="form-group text-muted">
     		<select name="cId" class="form-control" required="required">
     			
@@ -237,6 +256,9 @@ else
   </div>
 </div>
 
+
+
+<%@include file="Components/common_modals.jsp"%>
 
 </body>
 </html>

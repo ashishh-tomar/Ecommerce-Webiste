@@ -28,7 +28,7 @@ function add_to_cart(pId,pName,pPrice)
 						}
 				})
 				localStorage.setItem("cart",JSON.stringify(pCart));
-				console.log("Product Quantity is increase")
+				//console.log("Product Quantity is increase")
 				showToast(oldProduct.productName+" Quantity Increased, Quantity : "+oldProduct.productQuantity)
 				}
 			
@@ -59,7 +59,7 @@ function update_cart()
 		console.log("Cart is Empty")
 		$(".cart-items").html("( 0 )");
 		$(".cart-body").html("<h3>Cart does not have any items </h3>");
-		$(".checkout-btn").addClass('disabled');
+		$(".checkout-btn").attr('disabled',true);
 		}
 	else
 		{
@@ -104,6 +104,7 @@ function update_cart()
 		</td>
 		</tr></table>`
 		$(".cart-body").html(table);
+		$(".checkout-btn").attr('disabled',false);
 		}
 }
 
@@ -133,3 +134,10 @@ function showToast(content){
                 $("#toast").removeClass("display");
             },2000)
         }
+
+
+//CheckOut Page
+function goToCheckout(){
+	
+	window.location="checkout.jsp"
+}
