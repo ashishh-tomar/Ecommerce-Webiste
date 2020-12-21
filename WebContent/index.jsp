@@ -104,7 +104,7 @@
   							<div class="card-body card-body-bg">
     							<h5 class="card-title"><%=p.getpName() %></h5>
     						<p class="card-text"><%=Helper.getTenWords(p.getpDescription()) %></p>
-    						<a href="#" class="btn text-btn">Go somewhere</a>
+    						<a href="#" class="btn text-btn" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add To Cart</a>
   							</div>
 						</div>
 			       

@@ -8,7 +8,7 @@ function add_to_cart(pId,pName,pPrice)
 		let product={ productId:pId,productName:pName,productQuantity:1,productPrice:pPrice}
 		products.push(product);
 		localStorage.setItem("cart",JSON.stringify(products));
-		console.log("Product is added for the first time")
+		//console.log("Product is added for the first time")
 		showToast("Item Added to Cart")
 		}
 	else

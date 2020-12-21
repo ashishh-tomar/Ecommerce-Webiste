@@ -27,4 +27,5 @@
 
 
 <!-- Toast -->
-<!--  <div id="toast" >This is our custom text</div> -->
+
+<div id="toast" >This is our custom text</div>
