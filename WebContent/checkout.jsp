@@ -11,6 +11,7 @@ if(user==null)
 	session.setAttribute("message","You are not logged in !! Login First to Checkout");	
 	response.sendRedirect("login.jsp");
 }
+else{
 
 %>
 
@@ -55,12 +56,12 @@ if(user==null)
     						<input value="<%=user.getUserPhone() %>"   type="text" class="form-control border-top-0 border-right-0 border-left-0" name="phone" placeholder="Phone Number" required="required">
   						</div>
   						<div class="form-group">
-    						<textarea value="<%=user.getUserAddress()%>"  class="form-control border-top-0 border-right-0 border-left-0" name="address"placeholder="Shipping Adress" required="required"></textarea>
+    						<textarea   class="form-control border-top-0 border-right-0 border-left-0" name="address"placeholder="Shipping Adress" required="required"><%=user.getUserAddress()%></textarea>
   						</div >
   						
   						<div  class="mb-2 text-center">
   						<button type="submit" class="btn btn-outline-dark  ">Order Now</button>
-						<button type="submit" class="btn btn-outline-dark  ">Continue Shopping</button>
+						<a href="index.jsp" class="btn btn-outline-dark  ">Continue Shopping</a>
 						
 						</div>
 						
@@ -82,3 +83,4 @@ if(user==null)
 <%@include file="Components/common_modals.jsp"%>
 </body>
 </html>
+<%}%>

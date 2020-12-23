@@ -39,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 			session.setAttribute("message","Registration Successfull");
 			session.setAttribute("color","success");
 			
-			response.sendRedirect("register.jsp");
+			response.sendRedirect("login.jsp");
 		}
 		else
 		{

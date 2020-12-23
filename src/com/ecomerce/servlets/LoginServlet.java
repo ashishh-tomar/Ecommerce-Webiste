@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 			else if(user.getUserType().equalsIgnoreCase("normal"))
 			{
 				//Normal user page
-				response.sendRedirect("normal.jsp");
+				response.sendRedirect("index.jsp");
 			}
 			else
 			{

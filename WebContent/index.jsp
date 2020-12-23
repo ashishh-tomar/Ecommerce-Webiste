@@ -99,7 +99,7 @@
 			      
 			        -->
 			       
-			       <div class="card whole-card" style="width: 16rem;">
+			    <!--     <div class="card whole-card" style="width: 16rem; ">
   						<img class="card-img-top" src="img/ProductsImage/<%=p.getpPhoto() %>" alt="Card image cap" style="width: 16rem;height:8rem;">
   							<div class="card-body card-body-bg">
     							<h5 class="card-title"><%=p.getpName() %></h5>
@@ -109,7 +109,29 @@
 						</div>
 			       
 			       
-			       
+			       -->
+			       <div class="card  mt-4 mb-4 box-shadow " style="width: 20rem;">
+                    <img class="img-fluid" src="img/ProductsImage/<%=p.getpPhoto() %>">
+                    <div class="card-body">
+                        <div class="d-flex"></div>
+                            <h4 class="card-title font-weight-bold"><%=p.getpName() %></h4>
+                            <div class="card-subtitle text-muted my-2"><%=Helper.getTenWords(p.getpDescription()) %> </div>
+                    
+                    <div class="card-text d-flex justify-content-between mt-5 mb-3">
+                        <span>Free Shipping</span>
+                        <span class="_priceSection position-relative">
+                            <div class="_now h5">&#8377; <%=p.getDiscountPrice() %>/-</div>
+                            <del class="position-absolute _before h6 text-muted">&#8377;  <%=p.getpPrice()  %>/-</del>
+                        </span>
+                    </div>
+                     <div class="text-center">
+                    <button class="btn btn-outline-dark text-center d-inline-flex p-2 rounded-0 _cart-btn text-uppercase " onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)" >
+                        <span>Add To Cart</span>
+                       
+                    </button>
+                    </div>
+                        </div>
+                    </div>
 			       
 			       
 			       
