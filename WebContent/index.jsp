@@ -21,10 +21,10 @@
 <!-- Navbar end -->
 
 <div class="container-fluid">
-<div class="row mt-5">
-
+<div class="row ">
+<!--  
 	<%
-		ArrayList<Product> list=null;
+	ArrayList<Product> list=null;
 		String category=request.getParameter("category");
 		ProductDao dao=new ProductDao(ConnectionProvider.getConnection());
 		
@@ -40,97 +40,47 @@
 		}
 		CategoryDao dao2=new CategoryDao(ConnectionProvider.getConnection());
 		List<Category> cList=dao2.getCategories();
-	%>
+	 %>
 	
-	<!-- Show Categories -->
-	<div class="col-md-3 mt-4">
-		<div class="list-group">
-  			<a href="index.jsp?category=all" class="list-group-item text-dark list-group-item-action active">
-   				<h5> Categories</h5>
-  				</a>
-  				
 
 	
-	<%
-		for(Category c:cList)
-		{
-	%>
-			
-			<a href="index.jsp?category=<%=c.getCategoryId() %>" class="list-group-item list-group-item-action"><%=c.getCategoryTitle() %></a>
-		
-	<%
-		}
-	%>
-		</div>
-	</div>
-	<!-- Showe products -->
-	<div class="col-md-8 ml-5">
 	
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card-columns">
+	<!-- Showe products -->
+	
+			
 				
 				<!-- Traversing product -->
 				<%
 					for(Product p :list)
 					{
 				%>
-				 <!--
-					<div class="card">
-						<div class="container text-center">
-							<img class="card-img-top mt-2 " src="img/ProductsImage/<%=p.getpPhoto() %>"  style="max-height:100px;max-width:55%"alt="Card image cap">
-						
-						</div>
-						<div class="card-body">
-							<h5 class="card-title"><%=p.getpName() %></h5>
-							<p class="card-text"><%=Helper.getTenWords(p.getpDescription()) %></p>
-						</div>
-						<div class="card-footer">
-							<h5>&#8377; <%=p.getDiscountPrice() %>/-</h5>
-							<h6 style="font-size:10px;">&#8377;  <%=p.getpPrice()  %>/-    <%=   p.getpDiscount() %>% off   <button class="btn-outline-dark ml-3" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add to Cart</button> </h6>
-						</div>
-			       </div>
+				
 			       
-			      
+			  
 			       
-			       
-			       
-			        
-			      
-			        -->
-			       
-			    <!--     <div class="card whole-card" style="width: 16rem; ">
-  						<img class="card-img-top" src="img/ProductsImage/<%=p.getpPhoto() %>" alt="Card image cap" style="width: 16rem;height:8rem;">
-  							<div class="card-body card-body-bg">
-    							<h5 class="card-title"><%=p.getpName() %></h5>
-    						<p class="card-text"><%=Helper.getTenWords(p.getpDescription()) %></p>
-    						<a href="#" class="btn text-btn" onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)">Add To Cart</a>
-  							</div>
-						</div>
-			       
-			       
-			       -->
-			       <div class="card  mt-4 mb-4 box-shadow " style="width: 20rem;">
-                    <img class="img-fluid" src="img/ProductsImage/<%=p.getpPhoto() %>">
+			       <div class="col-lg-2 col-md-2">
+			       <div class="card  mt-4 mb-4 box-shadow " style="width: 14rem;">
+                    <img class="card-img-top m-auto" src="img/ProductsImage/<%=p.getpPhoto() %>" style="width:12rem;height:10rem;">
                     <div class="card-body">
                         <div class="d-flex"></div>
-                            <h4 class="card-title font-weight-bold"><%=p.getpName() %></h4>
-                            <div class="card-subtitle text-muted my-2"><%=Helper.getTenWords(p.getpDescription()) %> </div>
+                            <h6 class="card-title font-weight-bold"><%=p.getpName() %></h6>
+                            <div class="card-subtitle text-muted my-1"><%=Helper.getTenWords(p.getpDescription()) %> </div>
                     
-                    <div class="card-text d-flex justify-content-between mt-5 mb-3">
-                        <span>Free Shipping</span>
-                        <span class="_priceSection position-relative">
-                            <div class="_now h5">&#8377; <%=p.getDiscountPrice() %>/-</div>
-                            <del class="position-absolute _before h6 text-muted">&#8377;  <%=p.getpPrice()  %>/-</del>
+                    <div class="card-text d-flex justify-content-between mt-1 mb-1">
+                        
+                        <span >
+                            <div class="_now h5">&#8377; <%=p.getDiscountPrice() %>/-  <del class="  h6 text-muted">  &#8377;  <%=p.getpPrice()  %>/-</del></div>
+                            
                         </span>
                     </div>
                      <div class="text-center">
-                    <button class="btn btn-outline-dark text-center d-inline-flex p-2 rounded-0 _cart-btn text-uppercase " onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)" >
+                    <button class="btn btn-sm btn-block btn-dark text-center  p-2 rounded-5 _cart-btn text-uppercase " onclick="add_to_cart(<%=p.getpId()%> ,'<%=p.getpName()%>' ,<%=p.getDiscountPrice()%>)" >
                         <span>Add To Cart</span>
                        
                     </button>
                     </div>
                         </div>
+                    </div>
                     </div>
 			       
 			       
@@ -149,10 +99,8 @@
 				
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-</div>
+	
+
 <!-- Footer  -->
 
 

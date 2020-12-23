@@ -1,7 +1,37 @@
 <%@page import="com.ecomerce.entities.User"%>
+<%@page import="com.ecomerce.helper.Helper"%>
+<%@page import="com.ecomerce.entities.Category"%>
+<%@page import="com.ecomerce.dao.CategoryDao"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.ecomerce.entities.Product"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ecomerce.dao.ProductDao"%>
+<%@page import="com.ecomerce.helper.ConnectionProvider"%>
 <%
 User user1=(User)session.getAttribute("currentUser");
 %>
+
+<%
+		ArrayList<Product> l=null;
+		String ca=request.getParameter("category");
+		ProductDao d=new ProductDao(ConnectionProvider.getConnection());
+		
+		 if(ca==null || ca.trim().equals("all"))
+		{
+		 l=d.getAllProducts();
+		}
+		else
+		{
+			int cId=Integer.parseInt(ca.trim());
+			 l=d.getAllProductsById(cId);
+			
+		}
+		CategoryDao d2=new CategoryDao(ConnectionProvider.getConnection());
+		List<Category> cL=d2.getCategories();
+	%>
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-bg">
   <div class="container">
   	<a class="navbar-brand" href="#">Business Bustle</a>
@@ -23,10 +53,15 @@ User user1=(User)session.getAttribute("currentUser");
           Categories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <%
+		for(Category x:cL)
+		{
+		%>
+        
+          <a class="dropdown-item" href="index.jsp?category=<%=x.getCategoryId() %>" ><%=x.getCategoryTitle() %></a>
+       <%
+		}
+	%>
         </div>
       </li>
       
