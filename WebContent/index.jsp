@@ -20,6 +20,17 @@
 <%@include file="navbar.jsp"%>
 <!-- Navbar end -->
 
+<!-- Carosel Start -->
+
+
+
+
+
+<!-- Carosel End -->
+
+
+
+
 <div class="container-fluid">
 <div class="row ">
 <!--  
@@ -156,17 +167,17 @@
 			<div class="footer-widget contact-widget">
 				<h4 class="widget-title">Contact</h4>
 				<div class="contact-address">
-					Address : XYX, New Drlhi, India. <br>Pin-Code : 11111 <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/placeholder.svg" ></span>
+					Address : XYX, New Delhi, India. <br>Pin-Code : 11111 <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/placeholder.svg" ></span>
 				</div>
 				<div class="contact-numbers">
-				Phone : +91 1234567890	<span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/phone.svg" ></span>
+				Phone : +91 8766209527	<span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/phone.svg" ></span>
 				</div>
 				<div class="contact-email">
-				E-Mail : XYZ@gmail.com <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/gmail.svg" ></span>
+				E-Mail : info.shockeens@gmail.com <span><img style="width:15px;height:15px; margin-bottom:3px" src="icons/gmail.svg" ></span>
 				</div>
 				<div class="social-widgets ">
-					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px fill:#000;" src="icons/facebook.svg" ></span></a>
-					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/instagram.svg" ></span></a>
+					<a href="https://www.facebook.com/Shockeens/"><span><img style="width:20px;height:20px; margin-bottom:3px fill:#000;" src="icons/facebook.svg" ></span></a>
+					<a href="https://www.instagram.com/shopshockeens/"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/instagram.svg" ></span></a>
 					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/twitter.svg" ></span></a>
 					<a href="#"><span><img style="width:20px;height:20px; margin-bottom:3px" src="icons/youtube.svg" ></span></a>
 				</div>

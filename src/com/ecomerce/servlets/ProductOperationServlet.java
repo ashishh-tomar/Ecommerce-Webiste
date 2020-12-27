@@ -123,6 +123,11 @@ public class ProductOperationServlet extends HttpServlet {
 		
 			
 			System.out.println("success");
+			HttpSession session=request.getSession();
+			session.setAttribute("message","Product Added");
+			session.setAttribute("color","success");
+			
+			response.sendRedirect("admin.jsp");
 		}
 	}
 
