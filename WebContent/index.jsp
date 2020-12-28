@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome to Business Bustle</title>
+<title>Welcome to Shockeens</title>
 <%@include file="Components/common_css_javascript.jsp"%>
 </head>
 <body>
@@ -21,8 +21,71 @@
 <!-- Navbar end -->
 
 <!-- Carosel Start -->
+<div class="container-fluid">
+<div class="row  mb-4">
 
 
+
+
+<!-- Right Column -->
+<div class="col-md-10 offset-1">
+	
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 " src="img/static_Images/1523099546c.jpg"     style="height:30rem;" alt="First slide">
+    	
+   		 </div>
+   		 
+   		 
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/static_Images/d0ed8755463165.59851186454c6.jpg" style="height:30rem;" alt="Second slide">
+    	
+    </div>
+    
+    
+    
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/static_Images/OG_Woman-with-Shopping-Bags.jpg" style="height:30rem;" alt="Third slide">
+    	<div class="carousel-caption d-none d-md-block">
+    		<h1 class="display-3 text-dark">Big Sale !!! Hurry Up</h1>
+    		
+   		 </div>
+    </div>
+    
+    
+     <div class="carousel-item">
+      <img class="d-block w-100" src="img/static_Images/lab_no25_banner_linajpg.jpg" style="height:30rem;" alt="Second slide">
+    	<div class="carousel-caption d-none d-md-block">
+    		<h1 class="display-3 ">Up To 50% - 60% Off</h1>
+    		
+   		 </div>
+    </div>
+    
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		
+	
+	
+	</div>
+</div>
+
+
+</div>
 
 
 

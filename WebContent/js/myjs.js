@@ -136,6 +136,20 @@ function showToast(content){
         }
 
 
+
+//Confirmation mail
+function confirm()
+{
+	localStorage.clear();
+    $("#toast").addClass("display");
+    $("#toast").html("Your Order is placed please check your mail. Have a Good Day!!!");
+
+    setTimeout(()=>{
+        $("#toast").removeClass("display");
+    },6000)
+}
+
+
 //CheckOut Page
 function goToCheckout(){
 	

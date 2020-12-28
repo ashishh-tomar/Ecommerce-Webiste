@@ -44,7 +44,7 @@ else{
 		<div class="card">
 				<div class="card-body">
 				<h3 class="text-center mb-5">Customer Details</h3>
-				<form action="#!">
+				<form action="CheckoutServlet" method="post">
 						<div class="form-group">
     						<input value="<%=user.getUserName() %>"  type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" placeholder="Full Name" required="required">
   						</div>
@@ -56,11 +56,11 @@ else{
     						<input value="<%=user.getUserPhone() %>"   type="text" class="form-control border-top-0 border-right-0 border-left-0" name="phone" placeholder="Phone Number" required="required">
   						</div>
   						<div class="form-group">
-    						<textarea   class="form-control border-top-0 border-right-0 border-left-0" name="address"placeholder="Shipping Adress" required="required"><%=user.getUserAddress()%></textarea>
+    						<textarea   class="form-control border-top-0 border-right-0 border-left-0" name="address"placeholder="ShippingAdress" required="required"><%=user.getUserAddress()%></textarea>
   						</div >
   						
   						<div  class="mb-2 text-center">
-  						<button type="submit" class="btn btn-outline-dark  ">Order Now</button>
+  						<button type="submit" onclick="confirm()" class="btn btn-outline-dark  ">Order Now</button>
 						<a href="index.jsp" class="btn btn-outline-dark  ">Continue Shopping</a>
 						
 						</div>
