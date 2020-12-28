@@ -87,7 +87,7 @@ User user1=(User)session.getAttribute("currentUser");
       %>
       
       <li class="nav-item active">
-        <a class="nav-link" href="<%=user1.getUserType().equalsIgnoreCase("admin")?"admin.jsp":"normal.jsp"%>"><%=user1.getUserName() %> </a>
+        <a class="nav-link" href="<%=user1.getUserType().equalsIgnoreCase("admin")?"admin.jsp":"#"%>"><%=user1.getUserName() %> </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="LogoutServlet">Logout</a>

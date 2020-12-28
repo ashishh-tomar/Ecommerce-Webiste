@@ -132,7 +132,7 @@ function showToast(content){
 
             setTimeout(()=>{
                 $("#toast").removeClass("display");
-            },2000)
+            },6000)
         }
 
 

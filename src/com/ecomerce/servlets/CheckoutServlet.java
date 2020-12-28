@@ -25,6 +25,7 @@ public class CheckoutServlet extends HttpServlet {
 		
 		
 		
+		
 		String name=request.getParameter("name");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");

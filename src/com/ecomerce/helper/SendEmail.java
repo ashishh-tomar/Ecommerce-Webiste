@@ -17,7 +17,17 @@ public class SendEmail {
 	{
 		// TODO Auto-generated method stub
 		
-		String msg="Thanks for shopping at SHOCKEENS. \nWe hope to have the pleasure of doing business with you in the future.\nYou order will be delivered to "+name+" to Address "+address+" .Your Contact Number is : "+phone;
+		String msg="Hey "+name+" !,\r\n" + 
+				"\r\n" + 
+				"I just saw that you’ve recently stocked up on some of our products. Thanks a lot, I’d love to know what you think of everyone once you’ve had a chance to try it all!\r\n" + 
+				"\r\n" + 
+				"Also, for being such a great first-time buyer, here’s a little something extra: Use the code CRYSTAL15 to get 15% off your next order with us.\r\n" + 
+				"\r\n" + 
+				"Thanks once again, looking forward to hearing your feedback!\r\n" + 
+				"\r\n" + 
+				"-“ SHOCKEENS “";
+		
+		//String msg="Thanks for shopping at SHOCKEENS. \nWe hope to have the pleasure of doing business with you in the future.\nYou order will be delivered to "+name+" to Address :  "+address+" .Your Contact Number is : "+phone;
 		String to=em;
 		String subject="Order Placed !!!";
 		String from="info.shockeens@gmail.com";
