@@ -21,7 +21,7 @@ public class SendEmail {
 				"\r\n" + 
 				"I just saw that you’ve recently stocked up on some of our products. Thanks a lot, I’d love to know what you think of everyone once you’ve had a chance to try it all!\r\n" + 
 				"\r\n" + 
-				"Also, for being such a great first-time buyer, here’s a little something extra: Use the code CRYSTAL15 to get 15% off your next order with us.\r\n" + 
+				"Also, for being such a great first-time buyer, here’s a little something extra: Use the code Shockeens15 to get 15% off your next order with us.\r\n" + 
 				"\r\n" + 
 				"Thanks once again, looking forward to hearing your feedback!\r\n" + 
 				"\r\n" + 
@@ -51,7 +51,7 @@ public class SendEmail {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("info.shockeens@gmail.com","shockeens@2020");
+				return new PasswordAuthentication("info.shockeens2021@gmail.com","@Letsdoit24");
 				
 			}
 			

@@ -20,9 +20,10 @@
 <%@include file="navbar.jsp"%>
 <!-- Navbar end -->
 
+
 <!-- Carosel Start -->
 <div class="container-fluid">
-<div class="row  mb-4">
+<div class="row  mb-4 mt-4">
 
 
 
@@ -39,24 +40,39 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100 " src="img/static_Images/1523099546c.jpg"     style="height:30rem;" alt="First slide">
-    	
+      <img class="d-block w-100 " src="img/carousel-1.jpg"     style="height:30rem;" alt="First slide">
+    	<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
+                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="index.jsp">Shop Now</a>
+                                </div>
+                            </div>
    		 </div>
    		 
    		 
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/static_Images/d0ed8755463165.59851186454c6.jpg" style="height:30rem;" alt="Second slide">
-    	
+      <img class="d-block w-100" src="img/carousel-2.jpg" style="height:30rem;" alt="Second slide">
+    	 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
+                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="index.jsp">Shop Now</a>
+                                </div>
+                            </div>
     </div>
     
     
     
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/static_Images/OG_Woman-with-Shopping-Bags.jpg" style="height:30rem;" alt="Third slide">
-    	<div class="carousel-caption d-none d-md-block">
-    		<h1 class="display-3 text-dark">Big Sale !!! Hurry Up</h1>
-    		
-   		 </div>
+      <img class="d-block w-100" src="img/carousel-3.jpg" style="height:30rem;" alt="Third slide">
+    	 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Kids Fashion</h1>
+                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="index.jsp">Shop Now</a>
+                                </div>
+                            </div>
     </div>
     
     
@@ -90,13 +106,73 @@
 
 
 <!-- Carosel End -->
+ <!-- Categories Start -->
+    <div class="container-fluid pt-5">
+        <h1 class="font-weight-semi-bold ml-5 mt-3 mb-5">Categories</h1>
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Ladies</h6>
+                            <small class="text-body">35 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Cameras</h6>
+                            <small class="text-body">60 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Shoes</h6>
+                            <small class="text-body">50 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="img/cat-4.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Cosmetics</h6>
+                            <small class="text-body">85 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Categories End -->
 
 
 
 
 <div class="container-fluid">
 <div class="row ">
-<!--  
+  
 	<%
 	ArrayList<Product> list=null;
 		String category=request.getParameter("category");
@@ -175,6 +251,26 @@
 			</div>
 	
 
+
+   <!-- Offer Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="row px-xl-5 mb-5">
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-1.jpg" alt="">
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-2.jpg" alt="">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
+
 <!-- Footer  -->
 
 
@@ -216,7 +312,7 @@
 		<div class="footer-widget">
 			<h4 class="widget-title information-widget">Informations</h4>
 				<ul>
-					<li><a href="#">About Us</a></li>
+					<li><a href="about.jsp">About Us</a></li>
 					<li><a href="#">Contact Us</a></li>
 					<li><a href="#">Terms & Conditions</a></li>
 					<li><a href="#">Return & Exchange</a></li>
